@@ -24,7 +24,7 @@ export class PostsService{
 
     fetchPosts(){
         // get<type> is the same way to assign type at responseData: type but handle by Angular
-    this.http.get<{ [key: string]: Post }>('https://ng-complete-guide-d26fc.firebaseio.com/posts.json')
+    return this.http.get<{ [key: string]: Post }>('https://ng-complete-guide-d26fc.firebaseio.com/posts.json')
     .pipe(
       map(
         responseData => {
@@ -38,11 +38,6 @@ export class PostsService{
         }
       )
     )
-    .subscribe(
-      posts => {
-
-      }
-    );
     }
 
 
