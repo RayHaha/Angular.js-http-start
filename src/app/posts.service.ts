@@ -40,7 +40,9 @@ export class PostsService{
     )
     }
 
-
+    deletePost(){
+        return this.http.delete('https://ng-complete-guide-d26fc.firebaseio.com/posts.json');
+    }
 
 
 }
